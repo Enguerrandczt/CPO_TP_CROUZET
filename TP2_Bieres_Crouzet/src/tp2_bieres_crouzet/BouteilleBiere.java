@@ -11,11 +11,8 @@ package tp2_bieres_crouzet;
 public class BouteilleBiere {
 
     double degreAlcool;
-
     String Nom;
-
     String brasserie;
-
     boolean ouverte; 
 
  
@@ -23,11 +20,8 @@ public class BouteilleBiere {
 public BouteilleBiere(String unNom, double unDegre, String uneBrasserie) {
 
 Nom = unNom;
-
 degreAlcool = unDegre;
-
 brasserie = uneBrasserie;
-
 ouverte = false;
 
 }
