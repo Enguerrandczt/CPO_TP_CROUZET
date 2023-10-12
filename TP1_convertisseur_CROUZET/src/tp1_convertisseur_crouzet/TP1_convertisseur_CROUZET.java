@@ -69,6 +69,7 @@ public class TP1_convertisseur_CROUZET {
     public static double KelvinVersFahrenheit(double temperature) {
         return (temperature - 273.15) * 9/5 + 32;
     }
+    
 
     
     
