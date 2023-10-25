@@ -22,6 +22,7 @@ public class LightOff_Crouzet_version_console {
         
         cellule1.activerCellule();
         System.out.println(cellule1);
+        GrilleDejeu 1er = new GrilleDeJeu();
              
                 
     }
