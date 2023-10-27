@@ -89,8 +89,8 @@ public class GrilleDeJeu {
      * @param idLigne
      */
     public void activerLigneDeCellules(int idLigne) {
-        for (int j = 0; j < nbColonnes; j++) {
-            matriceCellules[idLigne][j].activerCellule();
+        for (int i = 0; i < nbColonnes; i++) {
+            matriceCellules[idLigne][i].activerCellule();
         }
     }
 
@@ -101,8 +101,8 @@ public class GrilleDeJeu {
      * @param idColonne
      */
     public void activerColonneDeCellules(int idColonne) {
-        for (int i= 0; i< nbLignes; i++) {
-            matriceCellules[i][idColonne].activerCellule();
+        for (int j= 0; j< nbLignes; j++) {
+            matriceCellules[j][idColonne].activerCellule();
         }
     }
 
@@ -136,7 +136,7 @@ public class GrilleDeJeu {
      * @return un boolean vrai si
      */
     public boolean cellulesToutesEteintes() {
-        for (int i= 0; i< nbLignes; i++) {
+        for (int i=0; i< nbLignes; i++) {
             for (int j= 0; j< nbColonnes; j++) {
                 if (!matriceCellules[i][j].estEteint()) {
                     return false;
@@ -146,19 +146,28 @@ public class GrilleDeJeu {
         return true;
     }
 
-    // Redéfinition de la méthode toString
+    
     @Override
     public String toString() {
-        StringBuilder grilleString = new StringBuilder();
+    StringBuilder grilleString = new StringBuilder();
 
-        for (int i = 0; i < nbLignes; i++) {
-            for (int j = 0; j < nbColonnes; j++) {
-                grilleString.append(matriceCellules[i][j]).append(" ");
-            }
-            grilleString.append("\n");
-        }
-
-        return grilleString.toString();
+    // Afficher les numéros de colonne
+    grilleString.append("   ");
+    for (int j=0; j<nbColonnes;j++) {
+        grilleString.append(" ").append(j+1).append(" |");
     }
+    grilleString.append("\n");
+
+    for (int i=0; i<nbLignes;i++) {
+        grilleString.append(i+1).append(" |");
+        for (int j=0; j<nbColonnes; j++) {
+            grilleString.append(" ").append(matriceCellules[i][j]).append(" |");
+        }
+        grilleString.append("\n");
+    }
+
+    return grilleString.toString();
+}
+
     
 }
