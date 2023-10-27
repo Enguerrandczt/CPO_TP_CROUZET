@@ -22,9 +22,47 @@ public class LightOff_Crouzet_version_console {
         
         cellule1.activerCellule();
         System.out.println(cellule1);
-        GrilleDejeu 1er = new GrilleDeJeu();
+        
+       ///////////////////////////////////////////////////////////////////////////////////////////////
+       
+        GrilleDeJeu grille = new GrilleDeJeu(5, 5);
+
+        // Affichage de l'état initial de la grille
+        System.out.println("etat initial de la grille :");
+        System.out.println(grille);
+
+        // Méthode pour mélanger la grille de manière aléatoire
+        grille.melangerMatriceAleatoirement(10000);
+
+        // Affichage de la grille mélangée
+        System.out.println("etat de la grille mélangée :");
+        System.out.println(grille);
+
+        // Méthode pour éteindre toutes les cellules de la grille
+        grille.eteindreToutesLesCellules();
+
+        // Affichage de la grille après avoir éteint toutes les cellules
+        System.out.println("etat de la grille après extinction :");
+        System.out.println(grille);
+
+        // Activer une ligne, une colonne ou une diagonale aléatoirement
+        grille.activerLigneColonneOuDiagonaleAleatoire();
+
+ 
+        System.out.println("etat de la grille après activation aléatoire :");
+        System.out.println(grille);
+
+  
+        if (grille.cellulesToutesEteintes()) {
+            System.out.println("Toutes les cellules sont éteintes.");
+        } else {
+            System.out.println("Il reste des cellules allumées.");
+        }
+    }
+
+    }
              
                 
-    }
     
-}
+    
+
