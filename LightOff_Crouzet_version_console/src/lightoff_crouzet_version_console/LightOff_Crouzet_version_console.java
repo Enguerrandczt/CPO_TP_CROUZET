@@ -58,6 +58,7 @@ public class LightOff_Crouzet_version_console {
         } else {
             System.out.println("Il reste des cellules allumées.");
         }
+        
     }
 
     }
