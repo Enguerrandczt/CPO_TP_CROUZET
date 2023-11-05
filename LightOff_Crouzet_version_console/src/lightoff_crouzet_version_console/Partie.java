@@ -60,7 +60,7 @@ public class Partie {
         initialiserPartie();
         Scanner scanner= new Scanner(System.in);
 
-        while (!grille.cellulesToutesEteintes()) {
+        while (!grille.cellulesToutesEteintes()&& nbCoups<coupsMax) {
             System.out.print("choisissez un niveau de difficulté");
             
             System.out.println("Jeu:");
@@ -94,10 +94,20 @@ public class Partie {
 
             nbCoups++;
             
+            
             System.out.println("Nb coups: " + nbCoups);
         }
-
-        System.out.println("And the WINNER IS LASALLE!! coups : " + nbCoups);
+        if (nbCoups<coupsMax) {
+            System.out.println("And the WINNER IS LASALLE!! coups : " + nbCoups);
+           
+                    
+        } else {
+            System.out.println("Désolé, vous avez atteint le nombre maximal de coups (" + coupsMax + ").");
+        }
+            
+        }
         
+
+       
     }
-}
+
