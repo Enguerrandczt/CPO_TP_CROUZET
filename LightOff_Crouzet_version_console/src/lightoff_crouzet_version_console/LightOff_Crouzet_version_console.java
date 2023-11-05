@@ -25,7 +25,7 @@ public class LightOff_Crouzet_version_console {
         
        ///////////////////////////////////////////////////////////////////////////////////////////////
        
-        GrilleDeJeu grille = new GrilleDeJeu(5, 5);
+        //
 
         // Affichage de l'état initial de la grille
         //System.out.println("etat initial de la grille :");
@@ -53,17 +53,21 @@ public class LightOff_Crouzet_version_console {
         //System.out.println(grille);
 
   
-        if (grille.cellulesToutesEteintes()) {
+        //if (grille.cellulesToutesEteintes()) {
             //System.out.println("Toutes les cellules sont éteintes.");
-        } else {
+        //} else {
             //System.out.println("Il reste des cellules allumées.");
-        }
+        //}
+    
         Partie partie = new Partie(); 
         partie.lancerPartie();
+  
         
     }
-
+       
     }
+
+    
              
                 
     
