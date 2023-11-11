@@ -27,7 +27,13 @@ public class CelluleGraphique extends JButton {
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        this.setText(celluleLumineuseAssociee.toString());
+        int w = this.getWidth();
+        int h = this.getHeight();
+        if (celluleLumineuseAssociee.estEteint() == true) {
+            g.setColor(Color.red);
+        } else {
+            g.setColor(Color.yellow);
+        }
+        g.fillOval(2, 2, w - 4, h - 4);
     }
 }
